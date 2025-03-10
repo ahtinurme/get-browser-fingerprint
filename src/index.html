@@ -13,7 +13,7 @@
       import getFingerprint from './index.js';
 
       const t0 = performance.now();
-      const fingerprint =await getFingerprint({ debug: true });
+      const fingerprint =await getFingerprint({ hardwareOnly: false, debug: true });
       const t1 = performance.now();
 
       const result = `Fingerprint: ${fingerprint} (computed in ${(t1 - t0).toFixed(0)} ms)`;
