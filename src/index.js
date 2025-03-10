@@ -1,6 +1,6 @@
 /** @type {import('./index.d.ts').getBrowserFingerprint} */
 const getBrowserFingerprint = async ({ hardwareOnly = true, debug = false } = {}) => {
-  const { cookieEnabled, deviceMemory, doNotTrack, hardwareConcurrency, language, languages, maxTouchPoints, platform, userAgent, vendor } = window.navigator;
+  const { cookieEnabled, deviceMemory, doNotTrack, hardwareConcurrency, language, languages, maxTouchPoints, platform, vendor } = window.navigator;
 
   // we use screen info only on mobile, because on desktop the user may use multiple monitors
   const enableScreen = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
@@ -54,7 +54,6 @@ const getBrowserFingerprint = async ({ hardwareOnly = true, debug = false } = {}
         timezone,
         timezoneOffset,
         touchSupport,
-        userAgent,
         vendor,
         webgl,
         webglInfo,
